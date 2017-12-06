@@ -1,0 +1,34 @@
+.reset {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+#game-wrapper {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  display: flex;
+  flex-flow: row wrap; }
+  #game-wrapper .cell {
+    flex: 1 148px;
+    border: 1px solid #000000;
+    cursor: pointer; }
+    #game-wrapper .cell.selected {
+      pointer-events: none; }
+    #game-wrapper .cell:hover:not(.selected), #game-wrapper .cell.selected {
+      background-position: 50%;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat; }
+      #game-wrapper .cell:hover:not(.selected).o, #game-wrapper .cell.selected.o {
+        background-image: url("../images/o.png");
+        -webkit-background-size: 90%;
+        background-size: 90%; }
+      #game-wrapper .cell:hover:not(.selected).x, #game-wrapper .cell.selected.x {
+        background-image: url("../images/x.png"); }
+
+/*# sourceMappingURL=styles.css.map */
