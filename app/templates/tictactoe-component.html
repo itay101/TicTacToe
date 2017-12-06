@@ -1,0 +1,6 @@
+<div>
+    <div id="game-wrapper" ng-class="{win:win}">
+        <cell-component ng-repeat="cell in cells" cell="cell" click-callback="cellClicked"></cell-component>
+    </div>
+    <button class="reset" ng-show="win" ng-click="resetGame()">Start Over</button>
+</div>

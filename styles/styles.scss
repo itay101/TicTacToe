@@ -1,0 +1,42 @@
+.reset{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#game-wrapper {
+  $size: 450px;
+  width: $size;
+  height: $size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  display: flex;
+  flex-flow: row wrap;
+
+  .cell {
+    flex: 1 148px;
+    border: 1px solid #000000;
+    cursor: pointer;
+
+    &.selected {
+      pointer-events: none;
+    }
+    &:hover:not(.selected), &.selected {
+      background-position: 50%;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &.o {
+        background-image: url('../images/o.png');
+        -webkit-background-size: 90%;
+        background-size: 90%;
+      }
+      &.x {
+        background-image: url('../images/x.png');
+      }
+    }
+  }
+}
